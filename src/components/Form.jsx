@@ -1,7 +1,7 @@
 const Form = () => {
   function signUp(formData) {
     const emailElement = formData.get("email");
-    console.log(emailElement);
+    const passwordElement = formData.get("password");
   }
   return (
     <section className="bg-green-600 min-h-screen flex flex-col items-center justify-center">
