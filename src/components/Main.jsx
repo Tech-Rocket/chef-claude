@@ -82,17 +82,20 @@ const Form = () => {
       {/* recipeCode.md content  */}
 
       {recipeShown === true && (
-        <section className="mt-4 border border-gray-300 rounded-md shadow-md p-5">
-          <h2>Chef Claude Recommends:</h2>
-          <article className="suggested-recipe-container" aria-live="polite">
-            <p>
+        <section className="mt-4 text-slate-700 font-medium text-lg">
+          <h2 className="text-3xl font-bold">Chef Claude Recommends:</h2>
+          <article
+            className="mt-5 w-[70%] flex flex-col gap-5"
+            aria-live="polite"
+          >
+            <p className="">
               Based on the ingredients you have available, I would recommend
-              making a simple a delicious <strong>Beef Bolognese Pasta</strong>.
-              Here is the recipe:
+              making a simple a delicious <strong> Beef Bolognese Pasta</strong>
+              . Here is the recipe:
             </p>
-            <h3>Beef Bolognese Pasta</h3>
-            <strong>Ingredients:</strong>
-            <ul>
+            <h3 className="text-2xl font-bold">Beef Bolognese Pasta</h3>
+            <strong className="text-xl">Ingredients:</strong>
+            <ul className="list-disc ml-9">
               <li>1 lb. ground beef</li>
               <li>1 onion, diced</li>
               <li>3 cloves garlic, minced</li>
@@ -106,8 +109,8 @@ const Form = () => {
                 8 oz pasta of your choice (e.g., spaghetti, penne, or linguine)
               </li>
             </ul>
-            <strong>Instructions:</strong>
-            <ol>
+            <strong className="text-xl">Instructions:</strong>
+            <ol className="list-decimal ml-9">
               <li>
                 Bring a large pot of salted water to a boil for the pasta.
               </li>
