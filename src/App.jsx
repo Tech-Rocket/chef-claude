@@ -8,8 +8,6 @@ function App() {
     <section className="text-slate-800 antialiased min-h-screen bg-[#FAFAF8]">
       <Header />
       <Main />
-      {/* <JokeApp /> */}
-      {/* <C3 /> */}
     </section>
   );
 }

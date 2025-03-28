@@ -1,32 +1,30 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function Joke(props) {
-  const [isShown, setIsShown] = useState(false);
+export default function (props) {
+  const [displayPunchline, setDisplayPunchline] = useState(false);
 
-  const toggleShown = () => {
-    setIsShown((prevShown) => !prevShown);
+  const handleDisplayPunchline = (prevState) => {
+    setDisplayPunchline((prevState = !prevState));
   };
   return (
-    <div className="font-medium uppercase tracking-wide">
-      <div className="flex flex-col gap-5 mb-3">
-        {props.setup ? (
-          <h2 className="text-2xl font-semibold">
-            <span className="text-blue-600">Joke:</span> {props.setup}
-          </h2>
-        ) : null}
-        {isShown ? (
-          <p className="text-lg font-medium">
-            <span className="text-red-600">Punchline:</span> {props.punchline}
-          </p>
-        ) : null}
-      </div>
+    <div className="text-slate-800 font-medium  flex flex-col gap-4">
+      <h1 className="text-3xl">
+        <span className="text-green-600">Setup: </span>
+        {props.setup}
+      </h1>
+      {displayPunchline === true && (
+        <p className="text-xl">
+          <span className="text-red-600">Punchline: </span>
+          {props.punchline}
+        </p>
+      )}
       <button
-        onClick={toggleShown}
-        className="py-2 px-4 bg-slate-600 rounded-md cursor-pointer text-white uppercase"
+        onClick={handleDisplayPunchline}
+        className="w-[200px] py-3 rounded-md bg-slate-800 text-white text-sm cursor-pointer uppercase tracking-wide"
       >
-        {isShown ? "hide" : "display"} punchline
+        display punchline
       </button>
-      <hr className="border border-black mt-3" />
+      <hr className="border border-gray-700" />
     </div>
   );
 }
