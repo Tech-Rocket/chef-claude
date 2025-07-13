@@ -1,30 +1,26 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function (props) {
-  const [displayPunchline, setDisplayPunchline] = useState(false);
+export default function Joke(props) {
+  console.log(props);
 
-  const handleDisplayPunchline = (prevState) => {
-    setDisplayPunchline((prevState = !prevState));
-  };
   return (
-    <div className="text-slate-800 font-medium  flex flex-col gap-4">
-      <h1 className="text-3xl">
-        <span className="text-green-600">Setup: </span>
-        {props.setup}
-      </h1>
-      {displayPunchline === true && (
-        <p className="text-xl">
-          <span className="text-red-600">Punchline: </span>
-          {props.punchline}
+    <>
+      <div className="p-2">
+        {props.setup && (
+          <h1 className="mb-2">
+            <span className="text-[orangered]">Setup: </span> {props.setup}
+          </h1>
+        )}
+        <p>
+          <span className="text-green-700">Punchline: </span> {props.punchline}
         </p>
-      )}
-      <button
-        onClick={handleDisplayPunchline}
-        className="w-[200px] py-3 rounded-md bg-slate-800 text-white text-sm cursor-pointer uppercase tracking-wide"
-      >
-        display punchline
-      </button>
-      <hr className="border border-gray-700" />
-    </div>
+        <hr />
+      </div>
+    </>
   );
 }
+
+Joke.propTypes = {
+  setup: PropTypes.string,
+  punchline: PropTypes.string,
+};

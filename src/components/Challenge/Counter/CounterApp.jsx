@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Count from "./Count";
 
 export default function CounterApp() {
   const [count, setCount] = useState(0);
@@ -23,7 +24,9 @@ export default function CounterApp() {
           >
             decrement
           </button>
-          <h1 className="text-2xl font-semibold">{count}</h1>
+
+          <Count count={count} />
+
           <button
             onClick={incrementCount}
             className="px-5 py-1.5 bg-white rounded text-black text-sm font-medium"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import chefClaudeIcon from "../assets/images/chef-claude-icon.png";
+import ChefClaudeIcon from "../../../public/images/chef-claude-icon.png";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 const Challenge = () => {
@@ -28,7 +28,7 @@ const Challenge = () => {
       <div className=" bg-white rounded-xl p-4 w-[300px] text-slate-800">
         <div className="flex items-center justify-center mb-2 ">
           <div className="flex items-center justify-center bg-blue-400 h-32 w-32 rounded-full">
-            <img src={chefClaudeIcon} />
+            <img src={ChefClaudeIcon} />
           </div>
         </div>
         <button
