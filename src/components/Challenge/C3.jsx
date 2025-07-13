@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function C3() {
-  const [unreadMessages, setUnReadMessages] = useState(["1"]);
+  const [unreadMessages] = useState(["1"]);
 
   let text;
   if (unreadMessages.length === 0) {
