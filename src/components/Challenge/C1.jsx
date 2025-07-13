@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ChefClaudeIcon from "../../../public/images/chef-claude-icon.png";
-import { FaStar, FaRegStar } from "react-icons/fa";
+import Star from "./c1-star";
 
 const Challenge = () => {
   const [userInfo, setUserInfo] = useState({
@@ -18,11 +18,6 @@ const Challenge = () => {
     }));
   }
 
-  let starIcon = userInfo.isFavorite ? (
-    <FaStar className="text-2xl" />
-  ) : (
-    <FaRegStar className="text-2xl" />
-  );
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-slate-800 text-white font-medium">
       <div className=" bg-white rounded-xl p-4 w-[300px] text-slate-800">
@@ -31,13 +26,8 @@ const Challenge = () => {
             <img src={ChefClaudeIcon} />
           </div>
         </div>
-        <button
-          onClick={toggleFavorite}
-          aria-pressed={userInfo.isFavorite}
-          aria-label={starIcon ? "Add to favorites" : "Remove from favorites"}
-        >
-          {starIcon}
-        </button>
+        <Star isFilled={userInfo.isFavorite} handleClick={toggleFavorite} />
+
         <h1 className="text-2xl font-bold my-2">
           {userInfo.firstName} {userInfo.lastName}
         </h1>

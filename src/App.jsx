@@ -1,7 +1,7 @@
-import Main from "./components/Main";
-import Header from "./components/Header";
-import JokeApp from "./components/Joke/JokeApp";
-import CounterApp from "./components/Challenge/Counter/CounterApp";
+// import Main from "./components/Main";
+// import Header from "./components/Header";
+// import JokeApp from "./components/Joke/JokeApp";
+// import CounterApp from "./components/Challenge/Counter/CounterApp";
 import C1 from "./components/Challenge/C1";
 
 function App() {
