@@ -7,10 +7,10 @@ import C1 from "./components/Challenge/C1";
 function App() {
   return (
     <section className="text-slate-800 antialiased min-h-screen bg-[#FAFAF8]">
-      {/* <Header />
-      <Main />
-      <JokeApp />
-      <CounterApp /> */}
+      {/* <Header /> */}
+      {/* <Main /> */}
+      {/* <JokeApp /> */}
+      {/* <CounterApp /> */}
       <C1 />
     </section>
   );

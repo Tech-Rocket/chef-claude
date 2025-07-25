@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 export default function Star(props) {
   let starIcon = props.isFilled ? (
-    <FaStar className="text-2xl" />
+    <FaStar className="text-2xl text-[#ffa371]" />
   ) : (
-    <FaRegStar className="text-2xl" />
+    <FaRegStar className="text-2xl text-[#ffa371]" />
   );
 
   return (

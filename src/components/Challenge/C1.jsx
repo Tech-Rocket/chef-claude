@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ChefClaudeIcon from "../../../public/images/chef-claude-icon.png";
+import ChefClaudeIcon from "/images/chef-claude-icon.png";
 import Star from "./c1-star";
 
 const Challenge = () => {
